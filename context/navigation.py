@@ -49,7 +49,7 @@ class LinkRegistry(object):
             linkregistry.register_static("/comics/", "Archive")
         """
         if url in (x[0] for x in self.static):
-            raise AlreadyRegistered("The url %s is already registered.") % url
+            raise AlreadyRegistered("The url %s is already registered." % url) 
         self.static.append((url,title))
     
     def register_dynamic(self, mapping):
